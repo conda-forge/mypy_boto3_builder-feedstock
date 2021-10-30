@@ -18,18 +18,18 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.8,<4.0
+    - python >=3.6,<4.0
     - poetry-core
   run:
     # From pyproject.toml, [tool.poetry.dependencies]
-    - black >=21.6b0
+    - black >=21.9b0,<22.0
     - boto3
-    - isort >=5.9.2,<6.0.0
+    - isort >=5.9.3,<6.0.0
     - jinja2 >=3.0.1,<4.0.0
-    - mdformat
-    - pyparsing
+    - mdformat >=0.7.9,<0.8.0
+    - pyparsing >=2.4.7,<3.0.0
     - pip
-    - python >=3.8,<4.0
+    - python >=3.6,<4.0
 
 test:
   imports:
