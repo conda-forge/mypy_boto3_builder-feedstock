@@ -1,11 +1,11 @@
-About mypy_boto3_builder
-========================
+About mypy_boto3_builder-feedstock
+==================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mypy_boto3_builder-feedstock/blob/main/LICENSE.txt)
 
 Home: https://pypi.org/project/mypy-boto3-builder/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mypy_boto3_builder-feedstock/blob/main/LICENSE.txt)
 
 Summary: Builder for boto3-stubs
 
