@@ -11,7 +11,7 @@ source:
   sha256: a251cf287c192d904e7f8f73610a18ee4aa1e36799c5e9c0891549711392ea36
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,16 +22,15 @@ requirements:
     - poetry-core
   run:
     # From pyproject.toml, [tool.poetry.dependencies]
-    - python >=3.10,<4.0
+    - python >=3.10.0,<4.0.0
     - pip
     - boto3
-    - black >=22.1.0,<23
-    - isort >=5.10.0,<6.0.0
-    - jinja2 >=3.0.1,<4.0.0
-    - pyparsing >=3.0.5,<4.0.0
-    - mdformat >=0.7.9,<0.8.0
-    - newversion >=1.8.2,<2.0.0
-    - requests >=2.26.0,<3.0.0
+    - black
+    - isort
+    - jinja2
+    - mdformat
+    - newversion
+    - cryptography
 
 test:
   imports:
