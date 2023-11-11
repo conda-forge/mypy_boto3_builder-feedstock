@@ -1,5 +1,5 @@
 {% set name = "mypy_boto3_builder" %}
-{% set version = "7.20.2" %}
+{% set version = "7.20.3" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 840e5bb213e699932a5e864d6456770f55855bbdf56de50f0eb8014406be7e38
+  sha256: a91a13dfbfc94e893d9841d07e3c9f71fe919a07baee156515c532609939ed88
 
 build:
   number: 0
