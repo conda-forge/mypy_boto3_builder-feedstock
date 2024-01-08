@@ -1,5 +1,5 @@
 {% set name = "mypy_boto3_builder" %}
-{% set version = "7.23.0" %}
+{% set version = "7.23.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e7edc929b47a736e399b621c894dc6575c8d8aa7b8878e87b5c4a9a0673e71a
+  sha256: d3248c416baeec6c228a5dbc41a78f4223a35fae27531a4dab346fc25b8263d9
 
 build:
   number: 0
@@ -22,16 +22,16 @@ requirements:
     - poetry-core
   run:
     # From pyproject.toml, [tool.poetry.dependencies]
-    - typing_extensions
+    - typing_extensions *
     - python >=3.10.0,<4.0.0
-    - pip
-    - boto3
-    - black
-    - isort
-    - jinja2
-    - mdformat
-    - newversion
-    - cryptography
+    - pip *
+    - boto3 *
+    - black *
+    - isort *
+    - jinja2 *
+    - mdformat *
+    - newversion *
+    - cryptography *
 
 test:
   imports:
