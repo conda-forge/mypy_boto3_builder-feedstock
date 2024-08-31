@@ -1,5 +1,5 @@
 {% set name = "mypy_boto3_builder" %}
-{% set version = "7.26.1" %}
+{% set version = "8.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 4b1b3d3a43331fd94c06a136bceea7036a224a301cf89887ec1fc3eb013803c6
+  sha256: 017cc608e24c8cdab9796b50e48776ffab3c62cf2ed9ae8baea95e993a5ea891
 
 build:
   number: 0
@@ -22,6 +22,9 @@ requirements:
     - poetry-core
   run:
     # From pyproject.toml, [tool.poetry.dependencies]
+    - requests
+    - ruff
+    - setuptools
     - packaging
     - typing_extensions
     - python >=3.10.0,<4.0.0
