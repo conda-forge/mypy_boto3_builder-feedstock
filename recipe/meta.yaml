@@ -1,58 +1,52 @@
 {% set name = "mypy_boto3_builder" %}
-{% set version = "8.1.2" %}
-
+{% set version = "8.1.4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0e7b41cfb2d1f438924cf03bed12f3c9d87ea7f311ff09b9d73b85fd64bcb7b1
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mypy_boto3_builder-{{ version }}.tar.gz
+  sha256: 226c57fad500702d52631e4e729b1ba2bd8d2e4f30a1137947dc3a392bfe83c2
 
 build:
-  number: 0
+  entry_points:
+    - mypy_boto3_builder = mypy_boto3_builder.main:main
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 0
 
 requirements:
   host:
+    - python >=3.12
+    - setuptools
     - pip
-    - python >=3.10,<4.0
-    - poetry-core
   run:
-    # From pyproject.toml, [tool.poetry.dependencies]
+    - python >=3.12
+    - boto3
+    - jinja2
+    - mdformat
+    - packaging
     - requests
     - ruff
     - setuptools
-    - packaging
-    - typing_extensions
-    - python >=3.10.0,<4.0.0
-    - pip
-    - boto3
-    - black
-    - isort
-    - jinja2
-    - mdformat
-    - newversion
-    - cryptography
 
 test:
   imports:
     - mypy_boto3_builder
-    - mypy_boto3_builder.enums
   commands:
     - pip check
-    # Test fails on Windows with permission denied:
-    - python -m mypy_boto3_builder mypy_boto3_output
+    - mypy_boto3_builder --help
   requires:
     - pip
 
 about:
   home: https://pypi.org/project/mypy-boto3-builder/
-  summary: Builder for boto3-stubs
+  summary: Builder for boto3-stubs and types-aiobotocore
   license: MIT
-  license_file: LICENSE
+  license_file:
+    - LICENSE
+    - mypy_boto3_builder/templates/common/LICENSE.jinja2
 
 extra:
   recipe-maintainers:
