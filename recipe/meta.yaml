@@ -18,24 +18,17 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.10,<4.0
-    - poetry-core
-  run:
-    # From pyproject.toml, [tool.poetry.dependencies]
-    - requests
-    - ruff
+    - python >=3.12
     - setuptools
-    - packaging
-    - typing_extensions
-    - python >=3.10.0,<4.0.0
+  run:
+    - python >=3.12
     - pip
     - boto3
-    - black
-    - isort
     - jinja2
     - mdformat
-    - newversion
-    - cryptography
+    - packaging
+    - ruff
+    - setuptools
 
 test:
   imports:
