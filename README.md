@@ -7,7 +7,7 @@ Home: https://pypi.org/project/mypy-boto3-builder/
 
 Package license: MIT
 
-Summary: Builder for boto3-stubs
+Summary: Builder for boto3-stubs and types-aiobotocore
 
 Current build status
 ====================

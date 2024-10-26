@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/mypy_boto3_builder-{{ version }}.tar.gz
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 226c57fad500702d52631e4e729b1ba2bd8d2e4f30a1137947dc3a392bfe83c2
 
 build:
@@ -18,9 +18,9 @@ build:
 
 requirements:
   host:
+    - pip
     - python >=3.12
     - setuptools
-    - pip
   run:
     - python >=3.12
     - boto3
