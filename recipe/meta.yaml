@@ -1,12 +1,13 @@
 {% set name = "mypy_boto3_builder" %}
 {% set version = "8.3.0" %}
+{% set python_min = "3.12" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: b024e82e1ab5f162adf0f7ec45cdbf4bf3033d6e19e5b8f7de8bb1bbd45aaf74
 
 build:
@@ -14,15 +15,15 @@ build:
     - mypy_boto3_builder = mypy_boto3_builder.main:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.12
+    - python {{ python_min }}
     - setuptools
   run:
-    - python >=3.12
+    - python >={{ python_min }}
     - boto3
     - jinja2
     - mdformat
@@ -39,9 +40,10 @@ test:
     - mypy_boto3_builder --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
-  home: https://pypi.org/project/mypy-boto3-builder/
+  home: https://github.com/youtype/mypy_boto3_builder
   summary: Builder for boto3-stubs and types-aiobotocore
   license: MIT
   license_file:

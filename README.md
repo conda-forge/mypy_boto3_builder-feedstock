@@ -3,7 +3,7 @@ About mypy_boto3_builder-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/mypy_boto3_builder-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pypi.org/project/mypy-boto3-builder/
+Home: https://github.com/youtype/mypy_boto3_builder
 
 Package license: MIT
 
