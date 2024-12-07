@@ -23,18 +23,19 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
-    - botocore
-    - colorama
-    - prompt-toolkit
-    - questionary >=2.0.1
     - python >={{ python_min }}
-    - boto3
     - jinja2
     - mdformat
     - packaging
+    - botocore
     - requests
     - ruff
     - setuptools
+    - colorama
+    - questionary >=2.0.1
+
+    # questionary 2.0.1 has requirement prompt_toolkit<=3.0.36,>=2.0
+    - prompt_toolkit <=3.0.36,>=2.0
 
 test:
   imports:
