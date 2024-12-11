@@ -1,5 +1,5 @@
 {% set name = "mypy_boto3_builder" %}
-{% set version = "8.6.1" %}
+{% set version = "8.6.3" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 86c8a7255b1ebc04247187df5255deb4bf3730939c8e826cdfc64d367928f4b1
+  sha256: d500b8266ec9a3b2510b12aac81bcd8bf3d28d99aca015c4f600cfdfa735355b
 
 build:
   entry_points:
@@ -23,6 +23,8 @@ requirements:
     - python {{ python_min }}
     - setuptools
   run:
+    - boto3
+    - prompt-toolkit
     - python >={{ python_min }}
     - jinja2
     - mdformat
