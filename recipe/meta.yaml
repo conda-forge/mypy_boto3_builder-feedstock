@@ -1,5 +1,5 @@
 {% set name = "mypy_boto3_builder" %}
-{% set version = "8.9.1" %}
+{% set version = "8.9.2" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ac762b32665c846d5c4fdda0a21f698205259d6b15eda18a43ad494fa40324f0
+  sha256: 91ed78eab496fac6a7a296b8577bc5e2f6224d89e5e94ff9cf1bdc7285fc2511
 
 build:
   entry_points:
