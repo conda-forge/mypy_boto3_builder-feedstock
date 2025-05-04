@@ -27,7 +27,7 @@ Current release info
 
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
-| [![Conda Recipe](https://img.shields.io/badge/recipe-mypy_boto3_builder-green.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mypy_boto3_builder.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mypy_boto3_builder.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mypy_boto3_builder.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-mypy__boto3__builder-green.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/mypy_boto3_builder.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/mypy_boto3_builder.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/mypy_boto3_builder.svg)](https://anaconda.org/conda-forge/mypy_boto3_builder) |
 
 Installing mypy_boto3_builder
 =============================
